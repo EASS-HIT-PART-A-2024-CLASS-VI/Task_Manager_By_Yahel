@@ -1,5 +1,4 @@
-# YahelN_Task_maneger_project
-# Task-manager-project
+# Task_Manager_By_Yahel
 
 **Task Manager** is a full-stack application built to help users manage their tasks effectively. 
 The backend is powered by **FastAPI** and handles the API logic, including CRUD operations (Create, Read, Update, Delete). The frontend is built using **Streamlit**, providing a simple interface to create, view, update, and delete tasks. The application is containerized using **Docker** and orchestrated with **Docker Compose**, ensuring smooth integration between the frontend, backend, and the PostgreSQL database.
@@ -172,3 +171,4 @@ We welcome contributions!
 
 ## Demo
 Watch a demo of the Task Manager in action: https://youtu.be/CB5FGZRF7JM
+

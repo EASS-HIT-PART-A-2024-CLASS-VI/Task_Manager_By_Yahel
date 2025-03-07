@@ -6,22 +6,20 @@ Task Manager is a full-stack application designed to help users efficiently mana
 
 #System Design Overview
 This section provides an overview of the major components in the Task Manager system and their respective roles.
-
-#Project Diagram
-•	Frontend (Streamlit): Provides the user interface to interact with tasks and task details.
-•	Backend (FastAPI): Handles core logic such as CRUD operations for task management.
-•	Database (PostgreSQL): Stores task-related data persistently.
-•	Docker Compose: Orchestrates the services to ensure smooth communication between the frontend, backend, and database.
+**Project Diagram**
+•	**Frontend (Streamlit):** Provides the user interface to interact with tasks and task details.
+•	**Backend (FastAPI):** Handles core logic such as CRUD operations for task management.
+•	**Database (PostgreSQL):** Stores task-related data persistently.
+•	**Docker Compose:** Orchestrates the services to ensure smooth communication between the frontend, backend, and database.
 
 #Components
-
-•	Frontend: Simple and intuitive interface, built with Streamlit, allowing users to create, view, update, and delete tasks.
-•	Backend API: Exposed via FastAPI, it manages task operations (CRUD).
-•	Database: PostgreSQL is used to store task-related data.
+•	**Frontend:** Simple and intuitive interface, built with Streamlit, allowing users to create, view, update, and delete tasks.
+•	**Backend API:** Exposed via FastAPI, it manages task operations (CRUD).
+•	**Database:** PostgreSQL is used to store task-related data.
 
 #Project Structure
 The repository is organized as follows:
-
+.
 ├── backend/                     # Contains FastAPI backend code for task management logic
 │   ├── main.py                  # API routes and logic for task management
 │   └── models.py                # Database models and schemas
@@ -32,11 +30,9 @@ The repository is organized as follows:
 ├── README.md                    # Project documentation
 └── .gitignore                   # Files to be ignored by git
 
-
 #API Endpoints Overview
 
 **- Creates a new task:**
-
 **Request Body:**
 {
   "title": "Task Title",
@@ -46,7 +42,6 @@ The repository is organized as follows:
   "priority": "High",
   "status": "Pending"
 }
-
 **Response Body:**
 {
   "id": "uuid-generated-id",
@@ -98,19 +93,15 @@ The repository is organized as follows:
   "message": "Task task-id deleted"
 }
 
-
-
 #How to Run the Project
 
-#System Requirements
+**System Requirements**
 Ensure the following dependencies are installed before setting up the project:
+•	**Docker:** Download Docker
+•	**Docker Compose:** Install Docker Compose
+•	**Python 3.8+:** Make sure you have Python version 3.8 or higher installed.
 
-•	Docker: Download Docker
-•	Docker Compose: Install Docker Compose
-•	Python 3.8+: Make sure you have Python version 3.8 or higher installed.
-
-Installation Steps
-
+**Installation Steps:**
 1.	Clone the Repository
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
@@ -130,10 +121,8 @@ o	Backend API: http://localhost:8000
 •	Backend (API): Access the backend API at http://localhost:8000.
 
 4.	Stopping the System
-
 To stop the system, run the following command:
 docker-compose down
-
 
 #Contributing
 We welcome contributions! If you'd like to contribute, follow these steps:
@@ -151,4 +140,4 @@ git push origin feature-branch
 
 4.	Open a pull request to merge your changes into the main branch.
 
-
+I hoped you have liked this task manager and you find it useful! :)

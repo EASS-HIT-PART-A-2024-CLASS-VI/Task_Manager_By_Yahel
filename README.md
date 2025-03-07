@@ -117,9 +117,9 @@ Retrieve a task by its ID:
   "message": "Task task-id deleted"
 }
 
+---
 
-
-🚀 How to Run the Project
+## 🚀 How to Run the Project
 **System Requirements**
 Ensure the following dependencies are installed before setting up the project:
 

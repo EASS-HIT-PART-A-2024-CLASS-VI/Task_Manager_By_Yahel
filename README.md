@@ -153,7 +153,7 @@ To stop the system, run the following command:
 docker-compose down
 
 
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome contributions! If you'd like to contribute, follow these steps:
 

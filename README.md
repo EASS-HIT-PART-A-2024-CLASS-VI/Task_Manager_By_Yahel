@@ -33,16 +33,7 @@ This section provides an overview of the major components in the Task Manager sy
 
 The repository is organized as follows:
 
-├── backend/                     # Contains FastAPI backend code for task management logic
-│   ├── main.py                  # API routes and logic for task management
-│   └── models.py                # Database models and schemas
-├── frontend/                    # Contains the Streamlit frontend application
-│   └── streamlit_app.py         # Main application file
-├── docker-compose.yml           # Docker Compose configuration for orchestrating services
-├── requirements.txt             # Dependencies for both frontend and backend
-├── README.md                    # Project documentation
-└── .gitignore                   # Files to be ignored by git
-
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/fb1d08e0-779f-47c1-9fd4-0b1e8587f01a" />
 
 ---
 

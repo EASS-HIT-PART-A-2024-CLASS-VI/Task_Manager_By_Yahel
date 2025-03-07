@@ -2,7 +2,7 @@
 
 **Task Manager** is a full-stack application designed to help users efficiently manage their tasks. Built using **FastAPI** for the backend and **Streamlit** for the frontend, it provides a simple interface for task management. The application is containerized using **Docker** and orchestrated with **Docker Compose**, ensuring smooth integration between the frontend, backend, and PostgreSQL database.
 
-🎥 **Watch a demo of the Task Manager in action:** [YouTube Link](#)
+🎥 **Watch a demo of the Task Manager in action:** [https://www.youtube.com/watch?v=CB5FGZRF7JM](#)
 
 ---
 

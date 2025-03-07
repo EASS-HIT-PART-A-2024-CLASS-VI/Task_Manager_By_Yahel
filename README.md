@@ -1,75 +1,43 @@
-# Task_Manager_By_Yahel
+#Task_Manager_By_Yahel
 
-**Task Manager** is a full-stack application built to help users manage their tasks effectively. 
-The backend is powered by **FastAPI** and handles the API logic, including CRUD operations (Create, Read, Update, Delete). The frontend is built using **Streamlit**, providing a simple interface to create, view, update, and delete tasks. The application is containerized using **Docker** and orchestrated with **Docker Compose**, ensuring smooth integration between the frontend, backend, and the PostgreSQL database.
+Task Manager is a full-stack application designed to help users efficiently manage their tasks. Built using FastAPI for the backend and Streamlit for the frontend, it provides a simple interface for task management. The application is containerized using Docker and orchestrated with Docker Compose, ensuring smooth integration between the frontend, backend, and PostgreSQL database.
 
-## Features
-- **Task Creation**: Users can create new tasks with details like title, description, category, due date, priority, and status.
-- **Task Retrieval**: Users can retrieve tasks by their ID to view details.
-- **Task Update**: Users can update existing tasks, including task details like priority, status, and description.
-- **Task Deletion**: Users can delete tasks from the list.
-- **User-Friendly Interface**: The frontend interface is simple and intuitive, built using Streamlit.
+🎥 Watch a demo of the Task Manager in action: YouTube Link
 
-## System Requirements
-Ensure the following are installed before setting up the project:
+#System Design Overview
+This section provides an overview of the major components in the Task Manager system and their respective roles.
 
-- **Docker** – Download and install Docker from [here](https://www.docker.com/get-started).
-- **Docker Compose** – Install Docker Compose from [here](https://docs.docker.com/compose/install/).
-- **Python 3.8+** – Ensure you have Python version 3.8 or higher.
+#Project Diagram
+•	Frontend (Streamlit): Provides the user interface to interact with tasks and task details.
+•	Backend (FastAPI): Handles core logic such as CRUD operations for task management.
+•	Database (PostgreSQL): Stores task-related data persistently.
+•	Docker Compose: Orchestrates the services to ensure smooth communication between the frontend, backend, and database.
 
-## Installation and Setup Instructions
+#Components
 
-### 1. Install Docker
-To install Docker, follow the instructions for your operating system:
-- **Windows/macOS**: Download Docker Desktop [here](https://www.docker.com/products/docker-desktop).
-- **Linux**: Follow the installation instructions [here](https://docs.docker.com/engine/install/).
+•	Frontend: Simple and intuitive interface, built with Streamlit, allowing users to create, view, update, and delete tasks.
+•	Backend API: Exposed via FastAPI, it manages task operations (CRUD).
+•	Database: PostgreSQL is used to store task-related data.
 
-### 2. Clone the Repository
-Clone the repository and navigate into the project directory:
-
-git clone https://github.com/your-username/task-manager.git
-cd task-manager
-3. Build and Run the Project Using Docker Compose
-
-To start the application, use Docker Compose to build and run the containers --> docker-compose up --build
-
-This will:
-
-- Build the backend and frontend services.
-- Start the PostgreSQL database.
-- Expose the necessary ports:
-- Frontend UI will be available at http://localhost:8501.
-- Backend API will be available at http://localhost:8000.
-
-4. Access the System
-Once the containers are running, you can interact with the application:
-
-Frontend (UI): Open http://localhost:8501 in your browser to start interacting with the UI.
-Backend (API): Access the backend API for task management at http://localhost:8000.
-
-5. Stopping the System
-To stop the system, use the following command:
-
-docker-compose down
-
-
-**Folder Structure
+#Project Structure
 The repository is organized as follows:
 
-backend/:  Contains the FastAPI backend code that handles the task management logic (routes for creating, updating, deleting tasks).
-frontend/:  Contains the Streamlit frontend application where users interact with the system.
-docker/:  Contains Docker-related files for both frontend and backend services.
-docker-compose.yml: The Docker Compose file which connects the frontend, backend, and database.
-requirements.txt: List of dependencies for both frontend and backend services.
+├── backend/                     # Contains FastAPI backend code for task management logic
+│   ├── main.py                  # API routes and logic for task management
+│   └── models.py                # Database models and schemas
+├── frontend/                    # Contains the Streamlit frontend application
+│   └── streamlit_app.py         # Main application file
+├── docker-compose.yml           # Docker Compose configuration for orchestrating services
+├── requirements.txt             # Dependencies for both frontend and backend
+├── README.md                    # Project documentation
+└── .gitignore                   # Files to be ignored by git
 
 
-API Endpoints
-POST /tasks
+#API Endpoints Overview
 
-Create a new task.
+**- Creates a new task:**
 
-Request Body
-
+**Request Body:**
 {
   "title": "Task Title",
   "description": "Task Description",
@@ -79,8 +47,7 @@ Request Body
   "status": "Pending"
 }
 
-Response
-
+**Response Body:**
 {
   "id": "uuid-generated-id",
   "title": "Task Title",
@@ -91,12 +58,8 @@ Response
   "status": "Pending"
 }
 
-
-GET /tasks/{task_id}
-Retrieve a task by its ID.
-
-Response
-
+**- Retrieve a task by its ID:**
+**Response Body:**
 {
   "id": "task-id",
   "title": "Task Title",
@@ -107,12 +70,8 @@ Response
   "status": "Pending"
 }
 
-
-PUT /tasks/{task_id}
-Update an existing task.
-
-Request Body
-
+**- Update an existing task:**
+**Request Body:**
 {
   "title": "Updated Task Title",
   "description": "Updated Task Description",
@@ -122,8 +81,7 @@ Request Body
   "status": "In Progress"
 }
 
-Response
-
+**Response Body:**
 {
   "id": "task-id",
   "title": "Updated Task Title",
@@ -134,41 +92,63 @@ Response
   "status": "In Progress"
 }
 
-
-DELETE /tasks/{task_id}
-Delete a task by its ID.
-
-Response
-
+**- Delete a task by its ID:**
+**Response Body:**
 {
   "message": "Task task-id deleted"
 }
 
 
-Contributing
 
-If you'd like to contribute to the project, follow these steps:
+#How to Run the Project
 
-Fork the repository and clone it to your machine:
+#System Requirements
+Ensure the following dependencies are installed before setting up the project:
 
+•	Docker: Download Docker
+•	Docker Compose: Install Docker Compose
+•	Python 3.8+: Make sure you have Python version 3.8 or higher installed.
+
+Installation Steps
+
+1.	Clone the Repository
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 
-Create a new branch for your feature or bugfix:
+2.	Build and Run the Project Using Docker Compose
+docker-compose up --build
 
+This will:
+•	Build the backend and frontend services.
+•	Start the PostgreSQL database.
+•	Expose the necessary ports:
+o	Frontend UI: http://localhost:8501
+o	Backend API: http://localhost:8000
+
+3.	Access the System
+•	Frontend (UI): Open http://localhost:8501 in your browser to interact with the UI.
+•	Backend (API): Access the backend API at http://localhost:8000.
+
+4.	Stopping the System
+
+To stop the system, run the following command:
+docker-compose down
+
+
+#Contributing
+We welcome contributions! If you'd like to contribute, follow these steps:
+
+1.	Fork the repository and clone it to your machine:
+git clone https://github.com/your-username/task-manager.git
+cd task-manager
+
+2.	Create a new branch:
 git checkout -b feature-branch
 
-Make your changes, commit them, and push them to your branch:
-
-
+3.	Make your changes, then commit and push them to your branch:
 git commit -am 'Add a new feature or fix a bug'
 git push origin feature-branch
 
-Open a pull request to merge your changes into the main branch.
+4.	Open a pull request to merge your changes into the main branch.
 
-
-We welcome contributions!
-
-## Demo
-Watch a demo of the Task Manager in action: https://youtu.be/CB5FGZRF7JM
 

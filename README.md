@@ -120,27 +120,34 @@ Retrieve a task by its ID:
 ---
 
 ## 🚀 How to Run the Project
+
 **System Requirements**
+
 Ensure the following dependencies are installed before setting up the project:
 
-Docker: Download Docker
-Docker Compose: Install Docker Compose
-Python 3.8+: Make sure you have Python version 3.8 or higher installed.
+- Docker: Download Docker
+- Docker Compose: Install Docker Compose
+- Python 3.8+: Make sure you have Python version 3.8 or higher installed.
 
 **Installation Steps**
 
 Clone the Repository:
-git clone https://github.com/your-username/task-manager.git
-cd task-manager
+
+- git clone https://github.com/your-username/task-manager.git
+- cd task-manager
 
 Build and Run the Project Using Docker Compose:
-docker-compose up --build
+
+- docker-compose up --build
 
 This will:
-1.Build the backend and frontend services.
-2. Start the PostgreSQL database.
-3. Expose the necessary ports:
+
+- Build the backend and frontend services.
+- Start the PostgreSQL database.
+- Expose the necessary ports:
+
 Frontend UI: http://localhost:8501
+
 Backend API: http://localhost:8000
 
 **Access the System:**
@@ -149,7 +156,9 @@ Frontend (UI): Open http://localhost:8501 in your browser to interact with the U
 Backend (API): Access the backend API at http://localhost:8000.
 
 **Stopping the System:**
+
 To stop the system, run the following command:
+
 docker-compose down
 
 

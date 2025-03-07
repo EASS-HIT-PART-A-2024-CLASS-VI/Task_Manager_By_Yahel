@@ -1,0 +1,27 @@
+# Ignoring Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignoring virtual environment folders (אם יש לך)
+venv/
+env/
+
+# Ignoring IDE folders
+.idea/
+.vscode/
+
+# Ignoring log files
+*.log
+
+# Ignoring database files (אם יש לך נתונים זמניים או SQLite לדוגמה)
+*.sqlite3
+
+# Ignoring sensitive files (אם יש קבצים סודיים כגון API keys או config files)
+*.env
+
+
+# Ignoring any node_modules folder if it's part of frontend
+node_modules/
+
+

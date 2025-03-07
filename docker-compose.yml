@@ -1,0 +1,46 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydatabase
+    depends_on:
+      - db
+    networks:
+      - taskmanager-network
+
+  ui:
+    build:
+      context: ./frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - taskmanager-network
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - taskmanager-network
+
+networks:
+  taskmanager-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+    driver: local
